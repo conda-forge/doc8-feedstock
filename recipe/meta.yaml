@@ -1,6 +1,6 @@
 {% set name = "doc8" %}
-{% set version = "0.7.0" %}
-{% set sha256 = "b89824683a23361c3f1f6ce8743cc97c86570596455dee1bb67d555f2106af06" %}
+{% set version = "0.8.0" %}
+{% set sha256 = "2df89f9c1a5abfb98ab55d0175fed633cae0cf45025b8b1e0ee5ea772be28543" %}
 
 package:
   name: {{ name|lower }}
