@@ -1,28 +1,26 @@
 {% set name = "doc8" %}
 {% set version = "0.8.0" %}
-{% set sha256 = "2df89f9c1a5abfb98ab55d0175fed633cae0cf45025b8b1e0ee5ea772be28543" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{name}}-{{version}}.tar.gz
-  url: https://pypi.io/packages/source/{{name[0]}}/{{name}}/{{name}}-{{version}}.tar.gz
-  sha256: {{sha256}}
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 2df89f9c1a5abfb98ab55d0175fed633cae0cf45025b8b1e0ee5ea772be28543
 
 build:
+    number: 2
     noarch: python
-    script: python -m pip install --no-deps --ignore-installed .
-    number: 1
+    script: "{{ PYTHON }} -m pip install . -vv"
+    entry_points:
+      - doc8 = doc8.main:main
 
 requirements:
   host:
-    - pip
     - python
-    - setuptools
+    - pip
     - pbr
-
   run:
     - python
     - chardet
@@ -33,11 +31,11 @@ requirements:
 
 test:
   commands:
-    - "doc8"
+    - doc8 -h
 
 about:
   home: https://launchpad.net/doc8
-  license: Apache 2.0
+  license: Apache-2.0
   license_family: Apache
   license_file: LICENSE
   summary: 'Doc8 is an opinionated style checker for rst (with basic support for plain text) styles of documentation.'
@@ -46,3 +44,4 @@ about:
 extra:
   recipe-maintainers:
     - dopplershift
+    - carlodri
