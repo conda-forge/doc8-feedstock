@@ -1,5 +1,5 @@
 {% set name = "doc8" %}
-{% set version = "0.8.0" %}
+{% set version = "0.8.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,14 +7,14 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 2df89f9c1a5abfb98ab55d0175fed633cae0cf45025b8b1e0ee5ea772be28543
+  sha256: 4d1df12598807cf08ffa9a1d5ef42d229ee0de42519da01b768ff27211082c12
 
 build:
-    number: 2
-    noarch: python
-    script: "{{ PYTHON }} -m pip install . -vv"
-    entry_points:
-      - doc8 = doc8.main:main
+  number: 0
+  noarch: python
+  script: {{ PYTHON }} -m pip install . -vv
+  entry_points:
+    - doc8 = doc8.main:main
 
 requirements:
   host:
@@ -28,6 +28,7 @@ requirements:
     - restructuredtext_lint >=0.7
     - six
     - stevedore
+    - pygments
 
 test:
   commands:
@@ -38,7 +39,7 @@ about:
   license: Apache-2.0
   license_family: Apache
   license_file: LICENSE
-  summary: 'Doc8 is an opinionated style checker for rst (with basic support for plain text) styles of documentation.'
+  summary: Doc8 is an opinionated style checker for rst (with basic support for plain text) styles of documentation.
   dev_url: https://github.com/openstack/doc8
 
 extra:
