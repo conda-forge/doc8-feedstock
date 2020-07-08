@@ -28,6 +28,7 @@ requirements:
     - restructuredtext_lint >=0.7
     - six
     - stevedore
+    - pygments
 
 test:
   commands:
