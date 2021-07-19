@@ -23,10 +23,8 @@ requirements:
     - pbr
   run:
     - python
-    - chardet
     - docutils
     - restructuredtext_lint >=0.7
-    - six
     - stevedore
     - pygments
 
