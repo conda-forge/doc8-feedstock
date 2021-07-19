@@ -1,7 +1,7 @@
 About doc8
 ==========
 
-Home: https://launchpad.net/doc8
+Home: https://github.com/PyCQA/doc8
 
 Package license: Apache-2.0
 
@@ -9,7 +9,7 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/doc8-feedstock/
 
 Summary: Doc8 is an opinionated style checker for rst (with basic support for plain text) styles of documentation.
 
-Development: https://github.com/openstack/doc8
+Development: https://github.com/PyCQA/doc8
 
 Current build status
 ====================
