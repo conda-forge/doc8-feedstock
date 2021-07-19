@@ -18,11 +18,11 @@ build:
 
 requirements:
   host:
-    - python
+    - python >=3.6
     - pip
     - pbr
   run:
-    - python
+    - python >=3.6
     - docutils
     - restructuredtext_lint >=0.7
     - stevedore
