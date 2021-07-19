@@ -1,15 +1,15 @@
 About doc8
 ==========
 
-Home: https://launchpad.net/doc8
+Home: https://github.com/PyCQA/doc8
 
 Package license: Apache-2.0
 
-Feedstock license: BSD 3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/doc8-feedstock/blob/master/LICENSE.txt)
 
 Summary: Doc8 is an opinionated style checker for rst (with basic support for plain text) styles of documentation.
 
-
+Development: https://github.com/PyCQA/doc8
 
 Current build status
 ====================
@@ -38,6 +38,7 @@ Installing `doc8` from the `conda-forge` channel can be achieved by adding `cond
 
 ```
 conda config --add channels conda-forge
+conda config --set channel_priority strict
 ```
 
 Once the `conda-forge` channel has been enabled, `doc8` can be installed with:
@@ -108,9 +109,9 @@ build distinct package versions.
 
 In order to produce a uniquely identifiable distribution:
  * If the version of a package **is not** being increased, please add or increase
-   the [``build/number``](https://conda.io/docs/user-guide/tasks/build-packages/define-metadata.html#build-number-and-string).
+   the [``build/number``](https://docs.conda.io/projects/conda-build/en/latest/resources/define-metadata.html#build-number-and-string).
  * If the version of a package **is** being increased, please remember to return
-   the [``build/number``](https://conda.io/docs/user-guide/tasks/build-packages/define-metadata.html#build-number-and-string)
+   the [``build/number``](https://docs.conda.io/projects/conda-build/en/latest/resources/define-metadata.html#build-number-and-string)
    back to 0.
 
 Feedstock Maintainers
