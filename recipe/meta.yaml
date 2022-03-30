@@ -1,5 +1,5 @@
 {% set name = "doc8" %}
-{% set version = "0.10.1" %}
+{% set version = "0.11.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 376e50f4e70a1ae935416ddfcf93db35dd5d4cc0e557f2ec72f0667d0ace4548
+  sha256: 282c1375e414292683738125d0d150b6639039be83ea0ee12def745d235ff1e7
 
 build:
   number: 0
