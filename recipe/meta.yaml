@@ -19,8 +19,11 @@ build:
 requirements:
   host:
     - python >=3.6
-    - pip
-    - setuptools_scm
+    - pip >=19.3.1
+    - setuptools >=42
+    - setuptools_scm >=3.5.0
+    - setuptools_scm_git_archive >=1.1
+    - wheel >=0.33.6
   run:
     - python >=3.6
     - docutils
