@@ -1,5 +1,5 @@
 {% set name = "doc8" %}
-{% set version = "0.11.2" %}
+{% set version = "1.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: c35a231f88f15c204659154ed3d499fa4d402d7e63d41cba7b54cf5e646123ab
+  sha256: 1e999a14fe415ea96d89d5053c790d01061f19b6737706b817d1579c2a07cc16
 
 build:
   number: 0
@@ -18,17 +18,18 @@ build:
 
 requirements:
   host:
-    - python >=3.6
+    - python >=3.7
     - pip >=19.3.1
     - setuptools >=42
     - setuptools_scm >=3.5.0
     - setuptools_scm_git_archive >=1.1
     - wheel >=0.33.6
   run:
-    - python >=3.6
-    - docutils
+    - python >=3.7
+    - docutils >=0.19,<0.21
     - restructuredtext_lint >=0.7
     - stevedore
+    - tomli
     - pygments
 
 test:
